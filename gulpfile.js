@@ -16,7 +16,7 @@ gulp.task('css', function() {
           "rem": false,
           "mqpacker": true
       }))
-      .pipe(gulp.dest('public/'));
+      .pipe(gulp.dest('docs/'));
 })
 
 gulp.task('watch', function(){

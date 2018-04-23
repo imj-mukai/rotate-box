@@ -1,10 +1,6 @@
 const path = require('path');
 
 module.exports = {
-  // ごりごり書きたい時は見張っててもらう
-  // watch: true,
-  // development 開発用
-  // production 本番用 圧縮
   watch: true,
   mode: 'development',
   entry: {
@@ -12,7 +8,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, 'public')
+    path: path.join(__dirname, 'docs')
   },
   module: {
     rules: [
@@ -30,7 +26,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js' //神よ〜〜〜〜stack overflow〜〜〜〜 https://stackoverflow.com/questions/45654720/webpack-fails-to-mount-vue-components
+      'vue$': 'vue/dist/vue.esm.js'
     }
   }
 };
