@@ -28,7 +28,7 @@ h1{
     transform-origin: center center;
     margin: 50px auto;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     &::before{
       content: '';
       display: block;
@@ -45,7 +45,19 @@ h1{
       line-height: 1;
       display: inline-block;
       transform-origin: left top;
-      transform: rotate(-45deg) translate(-17px, 77px);
+      transform: rotate(-45deg) translate(84px, -21px);
+    }
+    .width{
+      width: 1px;
+      height: 99%;
+      background: #000;
+      &::before{
+        content: '横幅';
+        display: inline-block;
+        white-space: nowrap;
+        color: #000;
+        transform: rotate(-45deg) translate(-65px, 20px);
+      }
     }
   }
 }
