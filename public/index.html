@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>斜めボックス生成ツール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>斜めボックス生成ツール</h1>
+    </header>
+    <main>
+      <article>
+        <h2>斜めボックスを作るときの横幅を算出します。</h2>
+        <div class="sample-rotate"></div>
+        <div id="app">
+          <div class="data">
+            <p>対角線を入力</p>
+            <input type="number" @keyup="onKeyup" v-model="number">
+          </div>
+          <div class="result">
+            <textarea>.box{&#010;&nbsp;&nbsp;width: {{result}}px;&#010;&nbsp;&nbsp;height: {{result}}px;&#010;&nbsp;&nbsp;transform: rotate(45deg);&#010;}</textarea>
+          </div>
+        </div>
+        <h3>考え方</h3>
+        <p>正方形の対角線を求める公式は<em>対角線 = 横幅 × √2</em><br>ここから横幅を求める時は<em>横幅 = 対角線 / √2</em><br>jsで入力した値に<code>Math.floor(this.number / Math.sqrt(2))</code>してます。</p>
+      </article>
+    </main>
+    <footer></footer>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
